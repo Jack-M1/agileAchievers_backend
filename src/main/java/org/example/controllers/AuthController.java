@@ -63,7 +63,8 @@ public class AuthController {
         } catch (SQLException e) {
             return Response.serverError().build();
         } catch (InvalidException e) {
-            return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .entity(e.getMessage()).build();
         }
     }
 
