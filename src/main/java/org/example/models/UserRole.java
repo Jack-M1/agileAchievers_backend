@@ -8,7 +8,8 @@ public class UserRole {
     public static final String MANAGEMENT = "Management";
     public static final String SALES = "Sales";
     int roleId;
-    private static final Map<Integer, String> rolesMap = Map.of(
+
+    private static final Map<Integer, String> ROLES_MAP = Map.of(
             1, ADMIN,
             2, HR,
             3, MANAGEMENT,
@@ -19,7 +20,7 @@ public class UserRole {
         setRoleId(roleId);
     }
     public String getRoleName() {
-        return rolesMap.get(getRoleId());
+        return ROLES_MAP.get(getRoleId());
     }
 
     public int getRoleId() {
